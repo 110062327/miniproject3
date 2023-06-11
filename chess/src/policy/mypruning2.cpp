@@ -147,6 +147,7 @@ Move _myclass2::get_move(State *state, int depth){
     state->get_legal_actions();
   Move ans;
   if(state->player==0){//white
+    return alphabeta2(*state,depth,-1e9,1e9,true).movedata;
     int value=-1e9;
     for(auto child:state->legal_actions){
       State* next_state=state->next_state(child);

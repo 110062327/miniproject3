@@ -73,7 +73,7 @@ function minimax(node, depth, maximizingPlayer) is
 
 */
 int minimax(State& node, int depth, bool maximizingPlayer){
-  if(depth==0||std::abs(heuristicvalue(node))>=50){
+  if(depth==0||node.game_state == WIN){
     return heuristicvalue(node);
   }
   if(maximizingPlayer){
